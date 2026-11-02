@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PostureAI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+<h1>PostureAI</h1>
+<p>Real-Time AI Posture Assistant</p>
+<p class="note">Video is processed locally in your browser.</p>
+<button id="startBtn">Start Camera</button>
+<button id="stopBtn">Stop Camera</button>
+<label><input type="checkbox" id="voice"> Voice Feedback</label>
+</div>
+
+<div class="card">
+<div class="wrap">
+<video id="video" autoplay playsinline muted></video>
+<canvas id="canvas"></canvas>
+</div>
+</div>
+
+<div class="card">
+<h3 id="posture">NO PERSON DETECTED</h3>
+<p>Score: <span id="score">0</span>/100</p>
+<div class="bar"><div id="fill"></div></div>
+<p id="tip">Start camera to begin.</p>
+<p>Good Time: <span id="good">0</span>s</p>
+<p>Poor Time: <span id="poor">0</span>s</p>
+<p>Corrections: <span id="corr">0</span></p>
+<p id="msg"></p>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
